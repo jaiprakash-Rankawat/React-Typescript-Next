@@ -49,14 +49,14 @@
 // export default page;
 
 // point 1 :
-"use client";
-import React, { useState } from "react";
+// "use client";
+// import React, { useState } from "react";
 
-const page = () => {
-  const [number, setNumber] = useState("");
-  let name: any = "Radha";
-  name = 22;
-  return <div>{name}</div>;
-};
+// const page = () => {
+//   const [number, setNumber] = useState("");
+//   let name: any = "Radha";
+//   name = 22;
+//   return <div>{name}</div>;
+// };
 
-export default page;
+// export default page;

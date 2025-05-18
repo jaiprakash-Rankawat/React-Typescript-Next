@@ -132,4 +132,138 @@ export default page;
 
 ## function parameter annotation
 
-### project 1
+```tsx
+import React from "react";
+
+const page = () => {
+  const add = (a: number, b: number) => {
+    return a + b;
+  };
+  return <div>{add(10, 20)}</div>;
+};
+
+export default page;
+```
+
+## Default parameter
+
+```tsx
+const greetPerson = (name: string = "Radha") => {
+  return `Hello, ${name}`;
+};
+```
+
+## Return type annotation
+
+```tsx
+const add = (a: number, b: number): number => {
+  return a + b;
+};
+```
+
+```tsx
+import React from "react";
+
+const page = () => {
+  const multipy = (a: number, b: number): string => {
+    return "multiplication of " + a + " and " + b + " is " + a * b;
+  };
+  return <div>{multipy(10, 20)}</div>;
+};
+
+export default page;
+```
+
+## void in Typescript
+
+```tsx
+import React from "react";
+
+const page = () => {
+  const greetPerson = (name: string = "Radha"): void => {
+    console.log(`Hello, ${name}`);
+  };
+  greetPerson();
+  greetPerson("jai");
+  return <div>page</div>;
+};
+
+export default page;
+```
+
+## never in Typescript
+
+```tsx
+import React from "react";
+
+const page = () => {
+  const greetPerson = (name: string = "Radha"): never => {
+    throw new Error("Not implemented");
+  };
+  greetPerson();
+  greetPerson("jai");
+  return <div>page</div>;
+};
+
+export default page;
+```
+
+## Arrays Types
+
+```tsx
+import React from "react";
+
+const page = () => {
+  const numbers: number[] = [1, 2, 3, 4, 5];
+  numbers.push(6);
+  console.log(typeof numbers);
+  return (
+    <div>
+      {numbers.map((number, index) => {
+        return <div key={index}>{number}</div>;
+      })}
+    </div>
+  );
+};
+
+export default page;
+```
+
+## optional property
+
+```tsx
+import React from "react";
+
+const page = () => {
+  type person = {
+    name: string;
+    age: number;
+    city?: string;
+  };
+
+  const person: person = {
+    name: "jai parakash",
+    age: 22,
+    city: "Lucknow",
+  };
+
+  const person2: person = {
+    name: "jai parakash",
+    age: 22,
+  };
+  return (
+    <div>
+      <div>Person's Details</div>
+      <div>{person.name}</div>
+      <div>{person.age}</div>
+      <div>{person.city}</div>
+      <div>Person2's Details</div>
+      <div>{person2.name}</div>
+      <div>{person2.age}</div>
+      <div>This will not rendered {person2.city}</div>
+    </div>
+  );
+};
+
+export default page;
+```
