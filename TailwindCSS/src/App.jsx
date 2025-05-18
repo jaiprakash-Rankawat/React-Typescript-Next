@@ -43,7 +43,7 @@ const App = () => {
       {/* <BgIamge /> */}
       {/* <Shadow /> */}
       {/* <Border /> */}
-      <BorderRadius />
+      {/* <BorderRadius /> */}
     </div>
   );
 };
