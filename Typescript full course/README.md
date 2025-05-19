@@ -267,3 +267,138 @@ const page = () => {
 
 export default page;
 ```
+
+## Intersection Types
+
+```tsx
+import React from "react";
+
+type person = {
+  name: string;
+  age: number;
+};
+type employee = {
+  id: number;
+  salary: number;
+};
+
+const page = () => {
+  const person: person & employee = {
+    name: "jai parakash",
+    age: 22,
+    id: 1,
+    salary: 20000,
+  };
+  return (
+    <div>
+      <div>Person's Details</div>
+      <div>{person.name}</div>
+      <div>{person.age}</div>
+      <div>{person.id}</div>
+      <div>{person.salary}</div>
+    </div>
+  );
+};
+
+export default page;
+```
+
+## Union Types
+
+```tsx
+import React from "react";
+
+type person = {
+  name: string;
+  age: number;
+};
+type employee = {
+  id: number;
+  salary: number;
+};
+
+type personOrEmployee = person | employee;
+
+const page = () => {
+  const person: personOrEmployee = {
+    name: "jai parakash",
+    age: 22,
+  };
+  return (
+    <div>
+      <div>Person's Details</div>
+      <div>{person.name}</div>
+      <div>{person.age}</div>
+    </div>
+  );
+};
+
+export default page;
+```
+
+## Literal Types
+
+```tsx
+import React from "react";
+
+const page = () => {
+  let person: "jai" | "parakash";
+  person = "jai";
+  console.log(person);
+  return <div>page</div>;
+};
+
+export default page;
+```
+
+## Tuples
+
+```tsx
+import React from "react";
+
+const page = () => {
+  const person: [string, number] = ["jai", 22];
+  return <div>page</div>;
+};
+
+export default page;
+```
+
+## Destructuring
+
+```tsx
+import React from "react";
+
+const page = () => {
+  const person: [string, number] = ["jai", 22];
+  const [name, age] = person;
+  return (
+    <div>
+      <div>{name}</div>
+      <div>{age}</div>
+    </div>
+  );
+};
+
+export default page;
+```
+
+## Enums
+
+```tsx
+import React from "react";
+
+const page = () => {
+  enum person {
+    name = "jai",
+    age = 22,
+  }
+  console.log(person.name);
+  console.log(person.age);
+  return <div>page</div>;
+};
+
+export default page;
+
+# Typescrit is Completed
+```

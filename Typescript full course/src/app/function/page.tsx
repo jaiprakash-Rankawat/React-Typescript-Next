@@ -1,34 +1,42 @@
+// import React from 'react'
+
+// const page = () => {
+//   const add = (a: string, b: number) => {
+//     return a + b;
+//   }
+//   console.log(add("10", 20));
+//   return (
+//     <div>page</div>
+//   )
+// }
+
+// export default page
+
+// import React from "react";
+
+// const page = () => {
+//   const greet = (a: string = "jai") => {
+//     console.log("Hello", a);
+//     console.log(`Hello ${a}`);
+//   };
+//   greet();
+//   greet("Radha");
+//   return <div>page</div>;
+// };
+
+// export default page;
+
 import React from "react";
 
 const page = () => {
-  type person = {
-    name: string;
-    age: number;
-    city?: string;
-  };
-
-  const person: person = {
-    name: "jai parakash",
-    age: 22,
-    city: "Lucknow",
-  };
-
-  const person2: person = {
-    name: "jai parakash",
-    age: 22,
-  };
-  return (
-    <div>
-      <div>Person's Details</div>
-      <div>{person.name}</div>
-      <div>{person.age}</div>
-      <div>{person.city}</div>
-      <div>Person2's Details</div>
-      <div>{person2.name}</div>
-      <div>{person2.age}</div>
-      <div>This will not rendered {person2.city}</div>
-    </div>
-  );
+  function Add(a: number, b: number): number {
+    // return 18 + "jai"
+    // return a+b;
+    console.log(a, b);
+    return a + b;
+  }
+  console.log(Add(10, 20));
+  return <div>page</div>;
 };
 
 export default page;
